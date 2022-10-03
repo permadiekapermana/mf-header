@@ -6,10 +6,10 @@
         <CIcon icon="cil-menu" size="lg" />
       </CHeaderToggler>
       <CHeaderBrand class="mx-auto d-lg-none">
-        <h4>Application Name Here</h4>
+        <h3>Application Name Here</h3>
       </CHeaderBrand>
       <CHeaderNav class="d-none d-md-flex me-auto">
-        <h4>Application Name Here</h4>
+        <h3>Application Name Here</h3>
       </CHeaderNav>
       <CHeaderNav>
         <AppHeaderDropdownAccnt />
