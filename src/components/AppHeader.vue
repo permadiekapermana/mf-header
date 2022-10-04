@@ -5,8 +5,8 @@
       <!-- <CHeaderToggler class="ps-1" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()"> -->
         <CIcon icon="cil-menu" size="lg" />
       </CHeaderToggler>
-      <CHeaderBrand class="mx-auto d-lg-none">
-        <h3>Application Name Here</h3>
+      <CHeaderBrand class="mx-auto d-lg-none d-md-none">
+        <h3>Application Name Here - head</h3>
       </CHeaderBrand>
       <CHeaderNav class="d-none d-md-flex me-auto">
         <h3>Application Name Here</h3>
