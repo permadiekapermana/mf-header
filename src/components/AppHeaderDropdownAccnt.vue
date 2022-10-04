@@ -26,5 +26,11 @@ export default {
       itemsCount: 42,
     }
   },
+  methods:{
+    logout(){      
+      localStorage.id_token = '';
+      window.location.href='http://localhost:9000/';
+    }
+  }
 }
 </script>
