@@ -3,10 +3,10 @@
     <CContainer fluid>
       <CHeaderToggler class="ps-1" @click="$store.commit('toggleSidebar')">
       <!-- <CHeaderToggler class="ps-1" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()"> -->
-        <CIcon icon="cil-menu" size="lg" />
+        <CIcon icon="cil-menu" size="lg" style="color: #EB0A1E" />
       </CHeaderToggler>
       <CHeaderBrand class="mx-auto d-lg-none d-md-none">
-        <h3>Application Name Here - head</h3>
+        <h3>Application Name Here</h3>
       </CHeaderBrand>
       <CHeaderNav class="d-none d-md-flex me-auto">
         <h3>Application Name Here</h3>
