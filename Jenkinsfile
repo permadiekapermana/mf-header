@@ -24,7 +24,7 @@ pipeline {
   stage('Deploy to Cluster') {
     steps {
 	  sh 'mkdir -p ${WEB_FOLDER}/${SERVICE_NAME}'
-      sh 'cp dist/* ${WEB_FOLDER}/${SERVICE_NAME}'
+      sh 'cp -R dist/* ${WEB_FOLDER}/${SERVICE_NAME}'
     }
   }
   
