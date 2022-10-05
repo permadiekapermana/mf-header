@@ -1,5 +1,8 @@
 const { defineConfig } = require('@vue/cli-service')
+const path = require("path");
 module.exports = defineConfig({
+  // outputDir: path.resolve(__dirname, "../public/header/"),
+  outputDir: "/var/www/html/header",
   transpileDependencies: true,
   configureWebpack: {
     output: {
