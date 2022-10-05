@@ -6,10 +6,10 @@
         <CIcon icon="cil-menu" size="lg" style="color: #EB0A1E" />
       </CHeaderToggler>
       <CHeaderBrand class="mx-auto d-lg-none d-md-none">
-        <h3>Application Name Here</h3>
+        <h3>Manufacturing Connectivity Platform</h3>
       </CHeaderBrand>
       <CHeaderNav class="d-none d-md-flex me-auto">
-        <h3>Application Name Here</h3>
+        <h3>Manufacturing Connectivity Platform</h3>
       </CHeaderNav>
       <CHeaderNav>
         <AppHeaderDropdownAccnt />
