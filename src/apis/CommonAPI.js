@@ -24,8 +24,6 @@ export default {
     },
     async queryApi( uri, method, queryParam){
       try{
-        console.log(process.env.VUE_APP_CONTAINER_URL)
-        console.log(process.env.VUE_APP_SC_API_URL)
         let response = await fetch( process.env.VUE_APP_SC_API_URL + uri + (this.isEmpty(queryParam)?'':('?' + queryParam)), {
             method: method, // *GET, POST, PUT, DELETE, etc.
             headers: {
