@@ -2,7 +2,6 @@
   <CHeader position="sticky" class="mb-4">
     <CContainer fluid>
       <CHeaderToggler class="ps-1" @click="$store.commit('toggleSidebar')">
-      <!-- <CHeaderToggler class="ps-1" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()"> -->
         <CIcon icon="cil-menu" size="lg" style="color: #EB0A1E" />
       </CHeaderToggler>
       <CHeaderBrand class="mx-auto d-lg-none d-md-none">

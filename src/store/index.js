@@ -7,12 +7,8 @@ export default createStore({
   },
   mutations: {
     toggleSidebar(state) {
-      coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle();    
-      document.querySelector('#SidebarToggler').click();  
-      if(state.sidebarVisible){
-        
-      }
-      state.sidebarVisible = !state.sidebarVisible;
+      document.getElementsByClassName("sidebar-fixed")[0].classList.toggle("hide");
+      document.getElementsByClassName("sidebar-fixed")[1].classList.toggle("hide");
       console.log('header toggleSidebar')
     },
     toggleUnfoldable(state) {
