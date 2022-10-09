@@ -122,3 +122,14 @@
 .hide-on-empty:empty {
     display: none;
 }
+
+.header {
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, .20),
+      rgba(255, 255, 255, .70), 70%, 
+      rgba(255, 255, 255, .20)
+    );
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .15);
+    backdrop-filter: blur(15px);
+  }
