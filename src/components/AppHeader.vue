@@ -15,7 +15,7 @@
       </CHeaderNav>
     </CContainer>
     <CHeaderDivider />
-    <CContainer fluid style="min-height: 19px !important;">
+    <CContainer fluid style="height: 19px !important;">
       <AppBreadcrumb />
     </CContainer>
   </CHeader>
