@@ -27,7 +27,7 @@ export default {
     }
   },
   async created(){
-    let dataUser = await api.queryApi('/api/user/user-info','POST' );
+    let dataUser = await api.queryApi('/api/common/user-info','POST' );
       
     this.userName = dataUser.data.firstName+' '+dataUser.data.lastName;
   },
