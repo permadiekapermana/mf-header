@@ -40,7 +40,7 @@ export default {
   methods:{
     logout(){      
       localStorage.id_token = '';
-      window.location.href=process.env.VUE_APP_CONTAINER_URL;
+      window.location.href=process.env.VUE_APP_CONTAINER_URL+'/';
     }
   }
 }
