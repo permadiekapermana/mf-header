@@ -1,10 +1,10 @@
 <template>
   <CDropdown variant="nav-item">
     <CDropdownToggle placement="bottom-end" class="py-0" :caret="false">
-      <h6>{{userName}} &nbsp;<CIcon icon="cilCaretBottom" /></h6>
+      <h6>{{userName}}&nbsp;<CIcon class="user-arrow" icon="cilChevronBottom" /></h6>
     </CDropdownToggle>
     <CDropdownMenu class="pt-0">
-      <CDropdownHeader component="h6" class="bg-light fw-semibold py-2">
+      <CDropdownHeader component="h6" class="fw-semibold py-2">
         Account
       </CDropdownHeader>
       <CDropdownItem> <CIcon icon="cil-user" /> Profile </CDropdownItem>
