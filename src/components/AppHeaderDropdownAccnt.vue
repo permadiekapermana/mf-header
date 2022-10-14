@@ -1,6 +1,6 @@
 <template>
   <CDropdown variant="nav-item">
-    <CDropdownToggle placement="bottom-end" class="py-0" :caret="false">
+    <CDropdownToggle placement="bottom-end" class="py-0" :caret="false"  href="#">
       <h6>{{userName}}&nbsp;<CIcon class="user-arrow" icon="cilChevronBottom" /></h6>
     </CDropdownToggle>
     <CDropdownMenu class="pt-0">
