@@ -13,8 +13,11 @@ export default {
             body: jsonBody
         } );
         let jsonResponse = await response.json();
-        if(jsonResponse.title==='Unauthorized'){
-          utils.error(jsonResponse.detail);
+        if(jsonResponse.status==='401'){
+          // utils.error(jsonResponse.detail,()=>{
+            localStorage.id_token = '';
+            window.location.href=process.env.VUE_APP_CONTAINER_URL;            
+          // });
         }
         return jsonResponse;
       }catch(e){       
@@ -32,8 +35,11 @@ export default {
             },
         } );
         let jsonResponse = await response.json();
-        if(jsonResponse.title==='Unauthorized'){
-          utils.error(jsonResponse.detail);
+        if(jsonResponse.status==='401'){
+          // utils.error(jsonResponse.detail,()=>{
+            localStorage.id_token = '';
+            window.location.href=process.env.VUE_APP_CONTAINER_URL;            
+          // });
         }
         return jsonResponse;
       }catch(e){        
