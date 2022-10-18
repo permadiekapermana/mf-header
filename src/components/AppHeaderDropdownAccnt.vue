@@ -1,15 +1,15 @@
 <template>
   <CDropdown variant="nav-item">
-    <CDropdownToggle placement="bottom-end" class="py-0" :caret="false"  href="#">
-      <h6>{{userName}}&nbsp;<CIcon class="user-arrow" icon="cilChevronBottom" /></h6>
+    <CDropdownToggle placement="bottom-end" class="py-0" href="javascript:void(0);">
+      {{userName}}
     </CDropdownToggle>
     <CDropdownMenu class="pt-0">
       <CDropdownHeader component="h6" class="fw-semibold py-2">
         Account
       </CDropdownHeader>
-      <CDropdownItem> <CIcon icon="cil-user" /> Profile </CDropdownItem>
+      <CDropdownItem href="/#/sc/profile"> <CIcon icon="cil-user" /> Profile </CDropdownItem>
       <CDropdownDivider />
-      <CDropdownItem @click="logout()">
+      <CDropdownItem href="#" @click="logout()">
         <CIcon icon="cilAccountLogout" /> Logout
       </CDropdownItem>
     </CDropdownMenu>
