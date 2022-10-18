@@ -16,8 +16,8 @@ pipeline {
    
    stage('Build Compile') {
      steps {
-	   sh 'npm install'
-	   sh 'set NODE_ENV=production'
+	   sh 'echo $NODE_ENV'
+	   sh 'npm install --production=false'
 	   sh 'npm run build:dev'
     }
    }
