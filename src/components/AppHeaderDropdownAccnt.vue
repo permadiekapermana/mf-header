@@ -33,8 +33,8 @@ export default {
   async created(){
     let dataUser = await api.queryApi('/api/common/user-info','POST' );
     this.photo = dataUser.data.photo
-    this.initial = dataUser.data.firstName.charAt(0);
-    this.initial += dataUser.data.lastName?dataUser.data.lastName.charAt(0):'';
+    this.initial = dataUser.data.firstName.toUpperCase().charAt(0);
+    this.initial += dataUser.data.lastName?dataUser.data.lastName.toUpperCase().charAt(0):'';
     this.userName = dataUser.data.firstName+' '+dataUser.data.lastName;
   },
   setup() {
