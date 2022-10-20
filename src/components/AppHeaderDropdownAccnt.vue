@@ -2,7 +2,7 @@
   <CDropdown variant="nav-item">
     <CDropdownToggle placement="bottom-end" class="py-0" href="javascript:void(0);">
       {{userName}}&ensp;
-      <CAvatar v-if="photo" :src="photo"/>
+      <img  v-if="photo" :src="photo" class="rounded-circle" style="width: 36px; height: 36px;">
       <CAvatar v-else="" color="danger " text-color="white">{{initial}}</CAvatar>
     </CDropdownToggle>
     <CDropdownMenu class="pt-0">
