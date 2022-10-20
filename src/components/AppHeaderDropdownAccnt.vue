@@ -1,7 +1,9 @@
 <template>
   <CDropdown variant="nav-item">
     <CDropdownToggle placement="bottom-end" class="py-0" href="javascript:void(0);">
-      {{userName}}
+      {{userName}}&ensp;
+      <CAvatar v-if="photo" :src="photo"/>
+      <CAvatar v-else="" color="danger " text-color="white">{{initial}}</CAvatar>
     </CDropdownToggle>
     <CDropdownMenu class="pt-0">
       <CDropdownHeader component="h6" class="fw-semibold py-2">
@@ -23,12 +25,16 @@ export default {
   name: 'AppHeaderDropdownAccnt',
   data(){
     return {
+      photo: null,
+      initial:'AA',
       userName: 'User Name 1'
     }
   },
   async created(){
     let dataUser = await api.queryApi('/api/common/user-info','POST' );
-      
+    this.photo = dataUser.data.photo
+    this.initial = dataUser.data.firstName.charAt(0);
+    this.initial += dataUser.data.lastName?dataUser.data.lastName.charAt(0):'';
     this.userName = dataUser.data.firstName+' '+dataUser.data.lastName;
   },
   setup() {
