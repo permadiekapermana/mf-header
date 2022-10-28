@@ -4,12 +4,13 @@
       v-for="item in breadcrumbsJsonValue"
       :key="item"
       :href="item.active ? '' : item.path"
-      :active="item.active"
+      :active="item.active"      
+      v-on:click="onClickBreadcrumb"
     >
       {{ item.name }}
     </CBreadcrumbItem>
     <CButton @click="breadcrumbsStrJsonValueChange()" id="breadcrumbsChangeValue" 
-    :style="{visibility: 'hidden'}">abc</CButton>
+    :style="{visibility: 'hidden'}">BreadcrumbsHelper</CButton>
   </CBreadcrumb>  
 </template>
 
@@ -20,12 +21,26 @@ export default {
   name: 'AppBreadcrumb',
   data() {
       return {
-        breadcrumbsJsonValue: [{"active":false,"name":"Home","path":"/#/"}]
+        breadcrumbsJsonValue: [{"active":false,"name":"Home","path":"#/sc/dashboard"}]
       }
   },
   methods: {
     breadcrumbsStrJsonValueChange(){
+      // console.log('mf-header '+localStorage.breadcrumbs);
+      // console.log('mf-header '+JSON.parse(localStorage.breadcrumbs))
       this.breadcrumbsJsonValue = JSON.parse(localStorage.breadcrumbs)
+    },
+    onClickBreadcrumb(e){
+      let nextBreadCrumbLiElement = e.target.parentNode.nextElementSibling;
+      while(nextBreadCrumbLiElement){
+        console.log(nextBreadCrumbLiElement.tagName)
+        if(nextBreadCrumbLiElement.tagName==='LI'){
+          nextBreadCrumbLiElement.remove();
+          nextBreadCrumbLiElement = e.target.parentNode.nextElementSibling;
+        }else{
+          nextBreadCrumbLiElement=undefined;
+        }
+      }
     }
   }
 }
